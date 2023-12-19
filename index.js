@@ -25,7 +25,9 @@ app.use(cors({
 // });
 
 app.use('/api',userrouter);
-
+app.get('/home',()=>{
+    return "welcome to home"
+});
 app.listen(3000,()=>{
     console.log("Server is running on port 3000");
 })
