@@ -23,11 +23,12 @@ app.use(cors({
 //         }
 //     );
 // });
+app.get('/',(req,res)=>{
+    res.status(200).send("Hello You are Welcome")
+});
 
 app.use('/api',userrouter);
-app.get('/home',()=>{
-    return "welcome to home"
-});
+
 app.listen(3000,()=>{
     console.log("Server is running on port 3000");
 })
